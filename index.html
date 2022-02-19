@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imtixon</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/modal.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="myLinks" class="modal1">
+            <div class="col-8"></div>
+            <div data-clean="seete" class="col-4 modalchild">
+                
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+
+        <!-- end modal -->
+        <header class="header mt-4">
+            <img src="./image/logo.png" alt="">
+            <div class="searchDiv w-50">
+                <img data-set="seet" class="imageSearch" src="./image/search.png" alt="">
+                <input class="input-search form-control w-100" value="javascript" type="text" id="input-search">
+            </div>
+            <svg width="43" height="43" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.90677 16.1L3.37341 19.665L6.93848 18.1316C6.13346 17.5566 5.44345 16.8666 4.90677 16.1Z"
+                    fill="#FFCE31" />
+                <path d="M18.0933 6.9L19.6266 3.33499L16.1 4.86833C16.8666 5.44333 17.5566 6.13333 18.0933 6.9Z"
+                    fill="#FFCE31" />
+                <path
+                    d="M3.60339 10.0817L0 11.5L3.60339 12.9184C3.48839 12.4584 3.45006 11.9984 3.45006 11.5C3.45006 11.0017 3.48839 10.5417 3.60339 10.0817Z"
+                    fill="#FFCE31" />
+                <path
+                    d="M19.3966 12.9184L23 11.5L19.3966 10.0817C19.4733 10.5417 19.5499 11.04 19.5499 11.5C19.5499 11.9984 19.5116 12.4584 19.3966 12.9184Z"
+                    fill="#FFCE31" />
+                <path
+                    d="M6.8999 4.90666L3.33496 3.37332L4.86827 6.93832C5.44326 6.13332 6.13325 5.44332 6.8999 4.90666Z"
+                    fill="#FFCE31" />
+                <path d="M16.1 18.0933L19.665 19.6266L18.1317 16.0616C17.5567 16.8666 16.8667 17.5566 16.1 18.0933Z"
+                    fill="#FFCE31" />
+                <path
+                    d="M12.9185 3.60333L11.5001 0L10.0818 3.60333C10.5418 3.52667 11.0401 3.45 11.5001 3.45C11.9601 3.45 12.4585 3.48833 12.9185 3.60333Z"
+                    fill="#FFCE31" />
+                <path
+                    d="M10.0818 19.3967L11.5001 23L12.9185 19.3967C12.4585 19.5117 11.9985 19.55 11.5001 19.55C11.0018 19.55 10.5418 19.5117 10.0818 19.3967Z"
+                    fill="#FFCE31" />
+                <path
+                    d="M11.5 18.7833C15.5225 18.7833 18.7833 15.5225 18.7833 11.5C18.7833 7.47753 15.5225 4.21667 11.5 4.21667C7.47753 4.21667 4.21667 7.47753 4.21667 11.5C4.21667 15.5225 7.47753 18.7833 11.5 18.7833Z"
+                    fill="#FFCE31" />
+            </svg>
+            <button class="btn btnElement">Logout</button>
+        </header>
+
+
+
+
+        <div class="showingBook mt-5">
+            <div class="sortStreet">
+                <p class="showPage">
+                    Showing <span class="showPageNumber">18</span> Result(s)
+                </p>
+
+                <div class="sortElements">
+                    <img src="./image/sortedimg.png" alt="">
+                    <button type="button" class="sortedEl">
+                        Order by newest
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="bookMark col-3">
+                    <h2>Bookmarks</h2>
+                    <p>
+                        If you don’t like to read, you haven’t found the right book
+                    </p>
+
+                    <!-- bookmark -->
+                    <div class="bookMarkItemList">
+
+
+                    </div>
+                </div>
+                <!-- ulList -->
+                <ul class="ulItem col-9">
+
+                </ul>
+
+                <div aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item page-link previousPage">
+                            << </li>
+                        <li class="page-item page-link answered">
+                            1
+                        </li>
+                        <li class="page-item page-link nextPage">
+                            >>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- bookmarktemplate -->
+    <template id="templateBookMark">
+        <div class="bookMarkList">
+            <div>
+                <h4 class="titleBookMark">Python</h4>
+                <p class="actorBookMark">David M. Beazley</p>
+            </div>
+            <img  class="bookimage" width="20px" height="20px" src="./image/book-open.png" alt="">
+            <button data-remove="delet" class="BookMark clouse_btn">
+                <img data-remove="delet" src="./image/deleteBtn.png" alt="">
+            </button>
+        </div>
+    </template>
+    <!-- booklisttemplate -->
+    <template id="templateBookList">
+        <li class="cord liItem mt-2 mb-2">
+            <img class="liItemImg" src="" alt="">
+            <h3 class="liItemTitle">Python</h3>
+            <p class="liItemActor">David M. Beazley</p>
+            <p class="liItemYear">2019</p>
+            <div class="btnlar mb-1">
+                <button data-setbook="bookMark" class="bookMarkBtn btnWidth">Bookmark</button>
+                <button data-set="set" onclick="myFunction()" class="moreInfoBtn btnWidth">More Info</button>
+            </div>
+            <button class="read">Read</button>
+        </li>
+    </template>
+
+    <template class="template_modal">
+        <div class="modal_enters">
+            <div class="modalChildrenTop">
+                <h2 class="modal_title">
+                    Python
+                </h2>
+                <button data-clouse="clouse" class="clouse_btn">
+                    <img src="./image/clousesEl.png" alt="">
+                </button>
+                </div>
+                <div class="modal_bottom">
+                <img class="modal_img mt-4 mb-4" src="" alt="">
+                <p class="modal_description mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+                    illum voluptas cumque, placeat, expedita sunt inventore hic veniam fuga rem debitis nulla,
+                    numquam provident quia voluptatibus exercitationem ex. Rem, in.</p>
+                    Author : <p class="modal_auther mb-4"></p>
+                    Published :<p class="modal_published mb-4"> </p>
+                    Publishers :<p class="modal_publishers mb-4"></p>
+                    Categories:<p class="modal_catedories mb-4"></p>
+                    Pages Count:<p class="modal_page_count mb-4"></p>
+                <button class="modal_read_btn mb-4 ms-auto">Read</button>
+            </div>
+        </div>
+    </template>
+
+
+
+
+
+</body>
+<script src="./js/login-true.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/bookMark.js"></script>
+<script src="./js/main.js"></script>
+
+</html>
